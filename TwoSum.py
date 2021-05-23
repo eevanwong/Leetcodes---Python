@@ -8,3 +8,5 @@ class Solution(object):
 
 #NON BRUTE FORCE WAY
 
+class Solution(object):
+    def twoSum(self, nums, target):
