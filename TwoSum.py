@@ -10,3 +10,10 @@ class Solution(object):
 
 class Solution(object):
     def twoSum(self, nums, target):
+        comp = {}
+        for i in range(len(nums)):
+            #how can I tie my current number with the target?
+            #WAIT get target - number?
+            if nums[i] in comp:
+                return([i, comp[nums[i]]])
+            comp[target - nums[i]] = i
