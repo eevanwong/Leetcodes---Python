@@ -29,4 +29,22 @@ class Solution(object):
         return(True)
             
 
-#Recursive Solution
+# Did this for a second time for MUST DO EASYS in masterlist
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        #FILO algorithm, stack?
+        dictionary = {'(': ')', '[': ']', '{': '}'}
+        stack = []
+        
+        if len(s) % 2 != 0:
+            return False
+        
+        for i in range(len(s)):
+            if s[i] in dictionary:
+                stack.append(s[i])
+            else:
+                if len(stack) == 0 or dictionary[stack.pop()] != s[i]:
+                    return False
+        
+        return len(stack) == 0
